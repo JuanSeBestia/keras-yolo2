@@ -134,6 +134,32 @@ By the end of this process, the code will write the weights of the best model to
 ### 5. Perform detection using trained weights on an image by running
 `python predict.py -c config.json -w /path/to/best_weights.h5 -i /path/to/image/or/video`
 
+``` bash
+#Comand to rename imgs
+ArrayName=(*)
+count=1
+for var in "${ArrayName[@]}"
+do
+mv "$var" "train_image$count.jpg"
+count=$(($count + 1))
+done
+
+
+# Comand to run all predecits
+START=$(date +%s)
+ArrayName=(*)
+for var in "${ArrayName[@]}"
+do
+echo "RUN PREDICT WITH $var"
+python predict.py -c config.json -w results/test_full_yolo_dipstick_test_1.h5 -i "$var"
+done
+END=$(date +%s)
+DIFF=$(( $END - $START ))
+echo "It took $DIFF seconds"
+
+
+```
+
 It carries out detection on the image and write the image with detected bounding boxes to the same folder.
 
 ## Usage for jupyter notebook

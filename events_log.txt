@@ -1,0 +1,240 @@
+DATA Result Racoon
+11:24 01/10/2018
+Epoch 1/4
+Loss XY         [0.00106910453]
+Loss WH         [2.30845594]
+Loss Conf       [0.127193242]
+Loss Class      [0]
+Total Loss      [12.436718]
+Current Recall  [0.999999881]
+Average Recall  [0.999999881]
+
+11:44
+Loss XY         [0.000108840715]
+Loss WH         [0.0126102054]
+Loss Conf       [0.0566235334]
+Loss Class      [0]
+Total Loss      [10.0693426]
+Current Recall  [0]
+Average Recall  [0.5450629]
+ - 1747s - loss: 10.1693 - val_loss: 10.0636
+
+Epoch 00001: val_loss improved from inf to 10.06363, saving model to test-full_yolo_racoon-test1.h5
+
+
+Loss XY         [8.83536777e-05]
+Loss WH         [0.0057270918]
+Loss Conf       [0.00994231366]
+Loss Class      [0]
+Total Loss      [10.0157576]
+Current Recall  [0]
+Average Recall  [0.181899011]
+ - 1688s - loss: 10.0223 - val_loss: 10.0159
+
+Epoch 00003: val_loss improved from 10.03541 to 10.01585, saving model to test-full_yolo_racoon-test1.h5
+Epoch 4/4
+
+Current Recall  [0.0555555485]
+Average Recall  [0.225851029]
+Loss XY         [0.0601252206]
+Loss WH         [0.721338272]
+Loss Conf       [0.00749146612]
+Loss Class      [0]
+Total Loss      [0.788955]
+Current Recall  [0.0526315719]
+Average Recall  [0.225329295]
+ - 1736s - loss: 0.6732 - val_loss: 0.8140
+
+13:23
+Epoch 00004: val_loss improved from 10.01585 to 0.81401, saving model to test-full_yolo_racoon-test1.h5
+(u'raccoon', '0.0264')
+mAP: 0.0264
+
+# python predict.py -c config.json -w test-full_yolo_racoon-test1.h5 -i examples/racoon/images/raccoon-106.jpg
+Using TensorFlow backend.
+2018-10-01 13:21:01.778461: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use:AVX2 FMA
+(13, 13)
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to
+==================================================================================================
+input_1 (InputLayer)            (None, 416, 416, 3)  0
+__________________________________________________________________________________________________
+model_1 (Model)                 (None, 13, 13, 1024) 50547936    input_1[0][0]
+__________________________________________________________________________________________________
+DetectionLayer (Conv2D)         (None, 13, 13, 30)   30750       model_1[1][0]
+__________________________________________________________________________________________________
+reshape_1 (Reshape)             (None, 13, 13, 5, 6) 0           DetectionLayer[0][0]
+__________________________________________________________________________________________________
+input_2 (InputLayer)            (None, 1, 1, 1, 10,  0
+__________________________________________________________________________________________________
+lambda_2 (Lambda)               (None, 13, 13, 5, 6) 0           reshape_1[0][0]
+                                                                 input_2[0][0]
+==================================================================================================
+Total params: 50,578,686
+Trainable params: 50,558,014
+Non-trainable params: 20,672
+__________________________________________________________________________________________________
+(0, 'boxes are found')
+
+## START WITH 50 Epoch
+
+Using TensorFlow backend.
+('Seen labels:\t', {'raccoon': 217})
+('Given labels:\t', [u'raccoon'])
+('Overlap labels:\t', set(['raccoon']))
+2018-10-01 15:44:58.632339: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use:AVX2 FMA
+(13, 13)
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to
+==================================================================================================
+input_1 (InputLayer)            (None, 416, 416, 3)  0
+__________________________________________________________________________________________________
+model_1 (Model)                 (None, 13, 13, 1024) 50547936    input_1[0][0]
+__________________________________________________________________________________________________
+DetectionLayer (Conv2D)         (None, 13, 13, 30)   30750       model_1[1][0]
+__________________________________________________________________________________________________
+reshape_1 (Reshape)             (None, 13, 13, 5, 6) 0           DetectionLayer[0][0]
+__________________________________________________________________________________________________
+input_2 (InputLayer)            (None, 1, 1, 1, 10,  0
+__________________________________________________________________________________________________
+lambda_2 (Lambda)               (None, 13, 13, 5, 6) 0           reshape_1[0][0]
+                                                                 input_2[0][0]
+==================================================================================================
+Total params: 50,578,686
+Trainable params: 50,558,014
+Non-trainable params: 20,672
+__________________________________________________________________________________________________
+('Loading pre-trained weights in', u'test-full_yolo_racoon-test1.h5')
+Epoch 1/53
+Loss XY         [0.00128481374]
+Loss WH         [0.614532709]
+Loss Conf       [0.0120281596]
+Loss Class      [0]
+Total Loss      [10.6278458]
+Current Recall  [0.368421018]
+Average Recall  [0.368421018]
+
+Loss XY         [0.056610439]
+Loss WH         [0.439818978]
+Loss Conf       [0.00235283049]
+Loss Class      [0]
+Total Loss      [0.498782247]
+Current Recall  [0]
+Average Recall  [0.0352386199]
+ - 2081s - loss: 0.2336 - val_loss: 0.6165
+OCT 1 18:44
+Epoch 00005: val_loss improved from 0.86478 to 0.61647, saving model to test-full_yolo_racoon-test2.h5
+Epoch 6/53
+
+Average Recall  [0.141476601]
+ - 2033s - loss: 0.0762 - val_loss: 0.3810
+
+Epoch 00016: val_loss did not improve from 0.36961
+Epoch 17/53
+
+Current Recall  [0.176470563]
+Average Recall  [0.164735124]
+Loss XY         [0.0563031361]
+Loss WH         [0.388263911]
+Loss Conf       [0.00153995352]
+Loss Class      [0]
+Total Loss      [0.446107]
+Current Recall  [0.24999997]
+Average Recall  [0.164783821]
+ - 2029s - loss: 0.0723 - val_loss: 0.4256
+
+Epoch 00017: val_loss did not improve from 0.36961
+Epoch 00017: early stopping
+(u'raccoon', '0.6667')
+mAP: 0.6667
+
+train model of author
+Loss XY         [0.0563143045]
+Loss WH         [0.234893724]
+Loss Conf       [0.00182406]
+Loss Class      [0]
+Total Loss      [0.29303208]
+Current Recall  [0.74999994]
+Average Recall  [0.571391106]
+ - 2085s - loss: 0.1672 - val_loss: 0.6391
+
+Epoch 00002: val_loss did not improve from 0.63613
+
+
+#### DIPSTICKS TRANINING OCT 2 12:57
+
+{
+    "model" : {
+        "backend":              "Full Yolo",
+        "input_size":           416,
+        "anchors":              [0.64,0.99, 0.90,1.18, 1.11,1.51, 1.27,1.87, 1.65,1.19],
+        "max_box_per_image":    100,        
+        "labels":               ["dipstick"]
+    },
+
+    "train": {
+        "train_image_folder":   "examples/dipstick/images/",
+        "train_annot_folder":   "examples/dipstick/annotations/",     
+          
+        "train_times":          10,
+        "pretrained_weights":   "",
+        "batch_size":           5,
+        "learning_rate":        1e-4,
+        "nb_epochs":            50,
+        "warmup_epochs":        3,
+
+        "object_scale":         5.0 ,
+        "no_object_scale":      1.0,
+        "coord_scale":          1.0,
+        "class_scale":          1.0,
+
+        "saved_weights_name":   "test_full_yolo_dipstick_test_1.h5",
+        "debug":                true
+    },
+
+    "valid": {
+        "valid_image_folder":   "",
+        "valid_annot_folder":   "",
+
+        "valid_times":          1
+    }
+}
+
+(venv) inkremental-3@inkremental3:~/gitKraken/keras-yolo2$ python train.py -c config.json
+Using TensorFlow backend.
+('Seen labels:\t', {'dipstick': 500})
+('Given labels:\t', [u'dipstick'])
+('Overlap labels:\t', set(['dipstick']))
+2018-10-02 12:56:42.999415: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use:AVX2 FMA
+(13, 13)
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to
+==================================================================================================
+input_1 (InputLayer)            (None, 416, 416, 3)  0
+__________________________________________________________________________________________________
+model_1 (Model)                 (None, 13, 13, 1024) 50547936    input_1[0][0]
+__________________________________________________________________________________________________
+DetectionLayer (Conv2D)         (None, 13, 13, 30)   30750       model_1[1][0]
+__________________________________________________________________________________________________
+reshape_1 (Reshape)             (None, 13, 13, 5, 6) 0           DetectionLayer[0][0]
+__________________________________________________________________________________________________
+input_2 (InputLayer)            (None, 1, 1, 1, 100, 0
+__________________________________________________________________________________________________
+lambda_2 (Lambda)               (None, 13, 13, 5, 6) 0           reshape_1[0][0]
+                                                                 input_2[0][0]
+==================================================================================================
+Total params: 50,578,686
+Trainable params: 50,558,014
+Non-trainable params: 20,672
+__________________________________________________________________________________________________
+Epoch 1/53
+Loss XY         [0.00642570341]
+Loss WH         [0.0450573079]
+Loss Conf       [0.12844871]
+Loss Class      [0]
+Total Loss      [10.1799316]
+Current Recall  [0.35]
+Average Recall  [0.35]
+
+Finally Epoch 17/53
+mAP 0.83
