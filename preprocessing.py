@@ -15,7 +15,12 @@ def parse_annotation(ann_dir, img_dir, labels=[]):
     for ann in sorted(os.listdir(ann_dir)):
         img = {'object':[]}
 
-        tree = ET.parse(ann_dir + ann)
+        try:
+            tree = ET.parse(ann_dir + ann)
+        except Exception as e:
+            print(e)
+            print('Ignore this bad annotation: ' + ann_dir + ann)
+            continue
         
         for elem in tree.iter():
             if 'filename' in elem.tag:
