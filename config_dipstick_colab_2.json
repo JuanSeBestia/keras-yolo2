@@ -19,8 +19,8 @@
         "warmup_epochs":        3,
 
         "object_scale":         5.0 ,
-        "no_object_scale":      1.0,
-        "coord_scale":          1.0,
+        "no_object_scale":      2.0,
+        "coord_scale":          3.0,
         "class_scale":          1.0,
 
         "saved_weights_name":   "full_yolo__v2_dipstick_colab_2.h5",
