@@ -1,19 +1,19 @@
 {
     "model" : {
         "backend":              "Full Yolo",
-        "input_size":           1024,
+        "input_size":           512,
         "anchors":              [0.92,1.21, 1.17,1.62, 1.30,1.23, 1.74,2.23, 2.90,3.59],
         "max_box_per_image":    300,        
         "labels":               ["dipstick"]
     },
 
     "train": {
-        "train_image_folder":   "keras-yolo3/examples/dipstick/images512-1024p/train_images/",
-        "train_annot_folder":   "keras-yolo3/examples/dipstick/images512-1024p/train_annotations/",     
+        "train_image_folder":   "dataset/train/JPEGImages/",
+        "train_annot_folder":   "dataset/train/Annotations/",     
           
         "train_times":          10,
         "pretrained_weights":   "",
-        "batch_size":           2,
+        "batch_size":           16,
         "learning_rate":        1e-4,
         "nb_epochs":            100,
         "warmup_epochs":        3,
@@ -28,9 +28,9 @@
     },
 
     "valid": {
-        "valid_image_folder":   "",
-        "valid_annot_folder":   "",
+        "valid_image_folder":   "dataset/valid/JPEGImages/",
+        "valid_annot_folder":   "dataset/valid/Annotations/",
 
-        "valid_times":          1
+        "valid_times":          3
     }
 }
