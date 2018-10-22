@@ -349,7 +349,7 @@ class YOLO(object):
                  generator, 
                  iou_threshold=0.3,
                  score_threshold=0.3,
-                 max_detections=100,
+                 max_detections=800,
                  save_path=None):
         """ Evaluate a given dataset using a given model.
         code originally from https://github.com/fizyr/keras-retinanet

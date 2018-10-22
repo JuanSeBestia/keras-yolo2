@@ -1,9 +1,9 @@
 {
     "model" : {
         "backend":              "Full Yolo",
-        "input_size":           512,
+        "input_size":           1024,
         "anchors":              [0.39,0.51, 0.56,0.73, 0.60,0.49, 0.84,1.03, 1.44,1.73],
-        "max_box_per_image":    300,        
+        "max_box_per_image":    800,        
         "labels":               ["dipstick"]
     },
 
@@ -11,7 +11,7 @@
         "train_image_folder":   "dataset/train/JPEGImages/",
         "train_annot_folder":   "dataset/train/Annotations/",     
           
-        "train_times":          8,
+        "train_times":          4,
         "pretrained_weights":   "",
         "batch_size":           16,
         "learning_rate":        1e-4,
@@ -31,6 +31,6 @@
         "valid_image_folder":   "dataset/valid/JPEGImages/",
         "valid_annot_folder":   "dataset/valid/Annotations/",
 
-        "valid_times":          3
+        "valid_times":          2
     }
 }

@@ -97,9 +97,7 @@ def _main_(args):
         video_writer.release()
     else:
         image_paths = []
-        print("11",os.path.isdir(image_path))
         if os.path.isdir(image_path):
-            print("11", os.listdir(image_path))
             for inp_file in os.listdir(image_path):
                 image_paths += [image_path + inp_file]
         else:
