@@ -305,7 +305,7 @@ class YOLO(object):
         ############################################
 
         early_stop = EarlyStopping(monitor='val_loss', 
-                           min_delta=0.001, 
+                           min_delta=0.0001, 
                            patience=3, 
                            mode='min', 
                            verbose=1)
