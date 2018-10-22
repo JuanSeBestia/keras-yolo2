@@ -23,7 +23,7 @@
         "coord_scale":          1.0,
         "class_scale":          1.0,
 
-        "saved_weights_name":   "yolo_v2_3:2_dipstick_colab_1024_1.h5",
+        "saved_weights_name":   "yolo_v2_10:1_dipstick_colab_1024_1.h5",
         "debug":                false
     },
 
