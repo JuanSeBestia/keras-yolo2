@@ -11,19 +11,19 @@
         "train_image_folder":   "dataset/train/JPEGImages/",
         "train_annot_folder":   "dataset/train/Annotations/",     
           
-        "train_times":          10,
+        "train_times":          8,
         "pretrained_weights":   "",
         "batch_size":           16,
         "learning_rate":        1e-4,
         "nb_epochs":            100,
         "warmup_epochs":        3,
 
-        "object_scale":         5.0 ,
-        "no_object_scale":      1.0,
+        "object_scale":         3.0 ,
+        "no_object_scale":      2.0,
         "coord_scale":          1.0,
         "class_scale":          1.0,
 
-        "saved_weights_name":   "full_yolo__v2_dipstick_colab_1.h5",
+        "saved_weights_name":   "yolo_v2_3:2_dipstick_colab_1.h5",
         "debug":                false
     },
 
