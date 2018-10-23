@@ -12,7 +12,7 @@
         "train_annot_folder":   "dataset/train/Annotations/",     
           
         "train_times":          4,
-        "pretrained_weights":   "",
+        "pretrained_weights":   "yolo_v2_10:1_20:1_5:3_dipstick_colab_1024_3.h5",
         "batch_size":           4,
         "learning_rate":        1e-6,
         "nb_epochs":            100,
