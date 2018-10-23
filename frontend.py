@@ -325,15 +325,15 @@ class YOLO(object):
         # Start the training process
         ############################################        
 
-        # self.model.fit_generator(generator        = train_generator, 
-        #                          steps_per_epoch  = len(train_generator) * train_times, 
-        #                          epochs           = warmup_epochs + nb_epochs, 
-        #                          verbose          = 2 if debug else 1,
-        #                          validation_data  = valid_generator,
-        #                          validation_steps = len(valid_generator) * valid_times,
-        #                          callbacks        = [early_stop, checkpoint, tensorboard], 
-        #                          workers          = 3,
-        #                          max_queue_size   = 8)      
+        self.model.fit_generator(generator        = train_generator, 
+                                 steps_per_epoch  = len(train_generator) * train_times, 
+                                 epochs           = warmup_epochs + nb_epochs, 
+                                 verbose          = 2 if debug else 1,
+                                 validation_data  = valid_generator,
+                                 validation_steps = len(valid_generator) * valid_times,
+                                 callbacks        = [early_stop, checkpoint, tensorboard], 
+                                 workers          = 3,
+                                 max_queue_size   = 8)      
 
         ############################################
         # Compute mAP on the validation set
