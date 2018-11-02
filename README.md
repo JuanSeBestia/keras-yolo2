@@ -140,7 +140,7 @@ ArrayName=(*)
 count=1
 for var in "${ArrayName[@]}"
 do
-mv "$var" "train_image$count.jpg"
+mv "$var" "train_201810_image$count.jpg"
 count=$(($count + 1))
 done
 
